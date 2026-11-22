@@ -1,0 +1,30 @@
+Configuration mosquitto et node red 
+
+PowerShell admin
+net stop mosquitto
+net start mosquitto
+netstat -an | findstr 1883
+
+PowerShell 1 (ecoute)
+cd "C:\Program Files\mosquitto"
+.\mosquitto_sub.exe -h localhost -t "animora/#" -v
+
+PowerShell 2 (message de test)
+cd "C:\Program Files\mosquitto"
+.\mosquitto_pub.exe -h localhost -t "animora/temperature" -m "25.5"
+
+-> lezem tjini hethi fi PowerShell 1 
+animora/temperature 25.5
+
+ipconfig 
+-> ne5ou adresse ipv4 (10.244.236.159)
+remarque: lezem dima nconnecti bl wifi (SM-A26 5G) bech ma ttbadelch adresse ipv4
+
+Dans Arduino ide lezem fi serial monitor nel9a 
+WIFI 10.244.236.251 | mqtt connecte 
+
+ouvrir une fenetre cmd 
+node-red et ouvrir http://127.0.0.1:1880/#flow/tab_animora
+
+pour le Dashboard: http://localhost:1880/ui
+

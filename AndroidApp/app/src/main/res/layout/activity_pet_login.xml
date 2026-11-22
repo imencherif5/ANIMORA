@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:id="@+id/tvHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello! 🐾"
+        android:textSize="32sp"
+        android:textColor="#0081A7"
+        android:fontFamily="@font/baloo"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:id="@+id/tvPetName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Enter Your Pet's Name"
+        android:textSize="18sp"
+        android:textColor="#0081A7"
+        android:layout_marginBottom="15dp" />
+
+    <EditText
+        android:id="@+id/etPetName"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Your pet's name"
+        android:singleLine="true"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:backgroundTint="#F07167" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a photo of your pet"
+        android:textSize="18sp"
+        android:textColor="#0081A7"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp" />
+
+    <ImageView
+        android:id="@+id/imgPet"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/profile"
+        android:scaleType="centerCrop"
+        android:background="#FDFCDC"
+        android:contentDescription="Pet photo"
+        android:layout_marginBottom="15dp" />
+
+    <Button
+        android:id="@+id/btnUploadPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Upload Photo"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#00AFB9" />
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Continue"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#F07167"
+        android:layout_marginTop="25dp" />
+
+</LinearLayout>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="110dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_glass2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Settings"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#0081A7"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Manage your account and pet"
+                    android:textSize="14sp"
+                    android:textColor="#777777"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="28dp"/>
+
+            </LinearLayout>
+
+            <!-- User Settings -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USER SETTINGS"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#0081A7"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_location_card"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/btnChangeUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Change User Name"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+
+            <!-- Pet Settings -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PET SETTINGS"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#0081A7"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_location_card"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/btnChangePetName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Change Pet Name"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"/>
+
+                <TextView
+                    android:id="@+id/btnChangePetPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Change Pet Photo"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+
+            <!-- About -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABOUT"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#0081A7"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_location_card"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/btnAboutAnimora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="About Animora"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="App Version     1.0.0"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:padding="12dp"/>
+
+            </LinearLayout>
+
+            <!-- Logout -->
+            <TextView
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⍈ Logout"
+                android:textColor="#F07167"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:background="@drawable/bg_location_card"
+                android:padding="18dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Fixed Navbar -->
+    <FrameLayout
+        android:id="@+id/navContainer"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_gravity="bottom"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <!-- Navbar background -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/nav_bg"
+            android:elevation="8dp">
+
+            <!-- Left: Chatbot -->
+            <LinearLayout
+                android:id="@+id/navChat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/chatbot"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/chat"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Chatbot"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chatbot"
+                    android:textColor="#0081A7"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <!-- Center space -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <!-- Right: Settings -->
+            <LinearLayout
+                android:id="@+id/navSettings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/settings"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Settings"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Settings"
+                    android:textColor="#0081A7"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Center: Home -->
+        <FrameLayout
+            android:id="@+id/navHome"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@drawable/circle_coral"
+            android:elevation="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/paw1"
+                android:scaleType="fitCenter"
+                android:contentDescription="Home"/>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

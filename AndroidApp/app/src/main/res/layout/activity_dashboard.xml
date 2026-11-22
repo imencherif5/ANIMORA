@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navContainer"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="20dp">
+
+            <!-- Hello user -->
+            <TextView
+                android:id="@+id/tvHelloUser"
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/baloo"/>
+
+            <!-- Pet photo -->
+            <FrameLayout
+                android:layout_width="164dp"
+                android:layout_height="164dp"
+                android:layout_marginTop="24dp"
+                android:padding="5dp"
+                android:background="@drawable/circle_border">
+
+                <ImageView
+                    android:id="@+id/imgPetDash"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circle_cream"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile"
+                    android:contentDescription="Pet photo"/>
+            </FrameLayout>
+
+            <!-- Pet name -->
+            <TextView
+                android:id="@+id/tvPetNameDash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Pet name"
+                android:textSize="26sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/baloo"/>
+
+            <!-- Quick actions -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="28dp"
+                android:text="Quick actions"
+                android:textColor="#0081A7"
+                android:textSize="22sp"
+                android:fontFamily="@font/baloo"/>
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/cardFeed"
+                    style="@style/QuickCard">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/a1"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Feed time"/>
+
+                    <TextView
+                        style="@style/QuickTitle"
+                        android:text="Feed time"/>
+
+                    <TextView
+                        android:id="@+id/tvFeedValue"
+                        style="@style/QuickValue"
+                        android:text="--:--"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/cardHeart"
+                    style="@style/QuickCard">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/a2"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Heart rate"/>
+
+                    <TextView
+                        style="@style/QuickTitle"
+                        android:text="Heart rate"/>
+
+                    <TextView
+                        android:id="@+id/tvHeartValue"
+                        style="@style/QuickValue"
+                        android:text="78 bpm"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cardTemp"
+                    style="@style/QuickCard">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/a3"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Temperature"/>
+
+                    <TextView
+                        style="@style/QuickTitle"
+                        android:text="Temperature"/>
+
+                    <TextView
+                        android:id="@+id/tvTempValue"
+                        style="@style/QuickValue"
+                        android:text="29.0 °C"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Row 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/cardActivity"
+                    style="@style/QuickCard">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/a4"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Activity"/>
+
+                    <TextView
+                        style="@style/QuickTitle"
+                        android:text="Activity"/>
+
+                    <TextView
+                        android:id="@+id/tvActivityValue"
+                        style="@style/QuickValue"
+                        android:text="Normal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cardTracking"
+                    style="@style/QuickCard">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/a55"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Live tracking"/>
+
+                    <TextView
+                        style="@style/QuickTitle"
+                        android:text="Live tracking"/>
+
+                    <TextView
+                        android:id="@+id/tvTrackingValue"
+                        style="@style/QuickValue"
+                        android:text="Open map"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <FrameLayout
+        android:id="@+id/navContainer"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_alignParentBottom="true"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <!-- Navbar background -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/nav_bg"
+            android:elevation="8dp">
+
+            <!-- Left: Chatbot -->
+            <LinearLayout
+                android:id="@+id/navChat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/chatbot"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/chat"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Chatbot"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chatbot"
+                    android:textColor="#0081A7"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <!-- Center space -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <!-- Right: Settings -->
+            <LinearLayout
+                android:id="@+id/navSettings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/settings"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Settings"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Settings"
+                    android:textColor="#0081A7"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Center: Home -->
+        <FrameLayout
+            android:id="@+id/navHome"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@drawable/circle_coral"
+            android:elevation="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/paw1"
+                android:scaleType="fitCenter"
+                android:contentDescription="Home"/>
+        </FrameLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_glass2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Feeding Schedule 🐾"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#0081A7"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manage your pet's feeding routine"
+                android:textSize="14sp"
+                android:textColor="#777777"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="28dp"/>
+
+        </LinearLayout>
+
+        <!-- Last Feeding -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_location_card"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last feeding time"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#0081A7"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"/>
+
+            <TimePicker
+                android:id="@+id/timePickerLast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numbersTextColor="@color/black"
+                android:timePickerMode="clock"
+                android:theme="@style/AnimoraTimePicker" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_location_card"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feeding interval"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#0081A7"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="10dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerInterval"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:backgroundTint="#00AFB9" />
+        </LinearLayout>
+
+        <!-- Next Feeding -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_location_card"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next feeding"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#0081A7"
+                android:layout_marginTop="28dp"/>
+
+            <TextView
+                android:id="@+id/tvNextFeeding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="--:--"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#F07167"
+                android:gravity="center"
+                android:padding="20dp"/>
+        </LinearLayout>
+
+        <!-- Save Button -->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSaveFeeding"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_location_button"
+            android:text="Save Schedule"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

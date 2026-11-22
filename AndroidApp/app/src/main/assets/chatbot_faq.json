@@ -1,0 +1,234 @@
+[
+  {
+    "intent": "about_animora",
+    "category": "general",
+    "questions": [
+      "What is ANIMORA?",
+      "What is this system?",
+      "What does ANIMORA do?",
+      "Tell me about ANIMORA",
+      "What is the purpose of this application?"
+    ],
+    "answer": "ANIMORA is a smart pet monitoring system designed to help pet owners monitor their pets' location, activity, temperature, and heart rate using a smart collar connected to a mobile application."
+  },
+  {
+    "intent": "system_features",
+    "category": "general",
+    "questions": [
+      "What are the main features?",
+      "What can ANIMORA do?",
+      "What features does the system provide?",
+      "What can I monitor with ANIMORA?"
+    ],
+    "answer": "ANIMORA provides GPS location tracking, activity monitoring, temperature measurement, heart rate monitoring, and battery status monitoring through a mobile application."
+  },
+  {
+    "intent": "system_components",
+    "category": "technical",
+    "questions": [
+      "What components are used?",
+      "Which sensors are included?",
+      "What hardware does ANIMORA use?",
+      "What are the main components of the collar?"
+    ],
+    "answer": "ANIMORA uses an ESP32 microcontroller, a NEO-6M GPS module, an MPU6050 accelerometer and gyroscope, an LM35 temperature sensor, and a heartbeat sensor."
+  },
+  {
+    "intent": "esp32",
+    "category": "technical",
+    "questions": [
+      "What is ESP32?",
+      "What does the ESP32 do?",
+      "Why do you use ESP32?",
+      "What is the role of the microcontroller?"
+    ],
+    "answer": "The ESP32 is the main microcontroller of ANIMORA. It collects sensor data, processes information, connects to Wi-Fi, and sends monitoring data to the cloud using MQTT."
+  },
+  {
+    "intent": "gps_tracking",
+    "category": "monitoring",
+    "questions": [
+      "How does GPS tracking work?",
+      "Where is my pet?",
+      "How can I locate my pet?",
+      "What is the GPS module?",
+      "What does the NEO-6M do?"
+    ],
+    "answer": "ANIMORA uses the NEO-6M GPS module to obtain geographical coordinates, including latitude and longitude. These coordinates can be displayed on a map in the mobile application. GPS reception may be affected by buildings and environmental conditions."
+  },
+  {
+    "intent": "activity_monitoring",
+    "category": "monitoring",
+    "questions": [
+      "How active is my pet?",
+      "How does activity monitoring work?",
+      "What does MPU6050 do?",
+      "What is the purpose of the accelerometer?",
+      "Can ANIMORA detect movement?"
+    ],
+    "answer": "The MPU6050 contains an accelerometer and a gyroscope. It measures acceleration and angular velocity to help detect movement and estimate your pet's activity level."
+  },
+  {
+    "intent": "temperature_monitoring",
+    "category": "monitoring",
+    "questions": [
+      "How does temperature monitoring work?",
+      "What does the LM35 do?",
+      "Can I monitor my pet's temperature?",
+      "What is the temperature sensor used for?"
+    ],
+    "answer": "ANIMORA uses the LM35 temperature sensor to measure temperature. The ESP32 reads the sensor output and sends the measured value to the monitoring system. Sensor placement and calibration affect measurement accuracy."
+  },
+  {
+    "intent": "heart_rate_monitoring",
+    "category": "monitoring",
+    "questions": [
+      "Can I monitor my pet's heart rate?",
+      "What does the heartbeat sensor do?",
+      "How does heart rate monitoring work?",
+      "What is BPM?",
+      "What does heart rate mean?"
+    ],
+    "answer": "The heartbeat sensor detects pulse signals and helps estimate heart rate in beats per minute (BPM). Readings depend on sensor placement, contact quality, and movement. ANIMORA is a monitoring tool and does not replace veterinary diagnosis."
+  },
+  {
+    "intent": "mqtt_communication",
+    "category": "technical",
+    "questions": [
+      "What is MQTT?",
+      "How does the system communicate?",
+      "How is sensor data transmitted?",
+      "Why do you use MQTT?",
+      "What is the role of the MQTT broker?"
+    ],
+    "answer": "MQTT is a lightweight messaging protocol used for communication between IoT devices. In ANIMORA, the ESP32 publishes sensor data to an MQTT broker, allowing the cloud platform and monitoring dashboard to receive the information."
+  },
+  {
+    "intent": "thingsboard",
+    "category": "technical",
+    "questions": [
+      "What is ThingsBoard?",
+      "Why do you use ThingsBoard?",
+      "What does the cloud platform do?",
+      "Where is sensor data stored?"
+    ],
+    "answer": "ThingsBoard is an IoT platform used to collect, visualize, and manage device telemetry. It allows ANIMORA to display sensor measurements and monitor the smart collar through dashboards."
+  },
+  {
+    "intent": "wifi_connection",
+    "category": "technical",
+    "questions": [
+      "Does ANIMORA use Wi-Fi?",
+      "How does the collar connect to the internet?",
+      "Does the ESP32 need Wi-Fi?",
+      "Can the collar send data without internet?"
+    ],
+    "answer": "ANIMORA currently uses Wi-Fi through the ESP32 to transmit sensor data to the cloud. An internet connection is required for remote monitoring through the mobile application."
+  },
+  {
+    "intent": "battery_status",
+    "category": "monitoring",
+    "questions": [
+      "How much battery is remaining?",
+      "How can I check the battery?",
+      "What is the battery level?",
+      "Does ANIMORA monitor battery status?"
+    ],
+    "answer": "ANIMORA can monitor the collar's battery level and display the remaining percentage in the application. This helps pet owners know when the device needs recharging."
+  },
+  {
+    "intent": "real_time_monitoring",
+    "category": "monitoring",
+    "questions": [
+      "Does ANIMORA work in real time?",
+      "Can I monitor my pet remotely?",
+      "Can I see live sensor data?",
+      "How can I monitor my pet from anywhere?"
+    ],
+    "answer": "ANIMORA is designed to provide near real-time monitoring. Sensor readings are transmitted through Wi-Fi and MQTT to the cloud platform, where they can be accessed through the mobile application. Update delays may depend on network connectivity."
+  },
+  {
+    "intent": "data_security",
+    "category": "security",
+    "questions": [
+      "Is my data secure?",
+      "How is my data protected?",
+      "Is ANIMORA secure?",
+      "Can someone access my pet's data?"
+    ],
+    "answer": "Data security is important in ANIMORA. Secure device authentication, protected communication, and appropriate access permissions should be used to prevent unauthorized access to pet monitoring information."
+  },
+  {
+    "intent": "gps_accuracy",
+    "category": "technical",
+    "questions": [
+      "Why is GPS not accurate?",
+      "Why can't I see my pet's location?",
+      "Why does GPS show the wrong location?",
+      "Why is GPS signal unavailable?"
+    ],
+    "answer": "GPS accuracy depends on satellite visibility and environmental conditions. Buildings, indoor environments, and weak satellite signals can reduce accuracy or prevent the NEO-6M from obtaining a valid position."
+  },
+  {
+    "intent": "offline_mode",
+    "category": "troubleshooting",
+    "questions": [
+      "What happens if Wi-Fi disconnects?",
+      "Does ANIMORA work offline?",
+      "Why is my device disconnected?",
+      "Why is data not updating?"
+    ],
+    "answer": "If the Wi-Fi connection is lost, the ESP32 cannot transmit new sensor readings to the cloud. Remote monitoring will be interrupted until the connection is restored."
+  },
+  {
+    "intent": "charging",
+    "category": "maintenance",
+    "questions": [
+      "How do I charge the collar?",
+      "How can I recharge the battery?",
+      "When should I charge the device?",
+      "Does the collar have a rechargeable battery?"
+    ],
+    "answer": "The ANIMORA collar uses a rechargeable battery. Recharge it when the battery level becomes low and follow the recommended charging procedure to protect the battery."
+  },
+  {
+    "intent": "pet_safety",
+    "category": "safety",
+    "questions": [
+      "Is ANIMORA safe for pets?",
+      "Can my pet wear the collar all day?",
+      "Is the smart collar comfortable?",
+      "Can the collar hurt my pet?"
+    ],
+    "answer": "The collar should be lightweight, properly fitted, and comfortable for your pet. Check the collar regularly for irritation or discomfort and remove it if it causes any problems."
+  },
+  {
+    "intent": "system_limitations",
+    "category": "general",
+    "questions": [
+      "What are the limitations?",
+      "Does ANIMORA have limitations?",
+      "Is the system always accurate?",
+      "Can ANIMORA replace a veterinarian?"
+    ],
+    "answer": "ANIMORA is a pet monitoring system, not a medical diagnostic device. Its performance depends on sensor accuracy, proper placement, battery life, Wi-Fi availability, and GPS signal quality. It cannot replace professional veterinary care."
+  },
+  {
+    "intent": "greeting",
+    "category": "general",
+    "questions": ["Hello", "Hi", "Hey", "Good morning", "Good evening"],
+    "answer": "Hello! Welcome to ANIMORA. I'm your smart pet assistant. How can I help you today?"
+  },
+  {
+    "intent": "thanks",
+    "category": "general",
+    "questions": ["Thank you", "Thanks", "Thanks a lot", "I appreciate it"],
+    "answer": "You're welcome! I'm always here to help you take better care of your pet."
+  },
+  {
+    "intent": "goodbye",
+    "category": "general",
+    "questions": ["Goodbye", "Bye", "See you", "Talk to you later"],
+    "answer": "Goodbye! Have a wonderful day with your furry friend!"
+  }
+]

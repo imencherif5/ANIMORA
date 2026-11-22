@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:padding="30dp"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello!    🐾"
+        android:textColor="#0081A7"
+        android:textSize="32sp"
+        android:fontFamily="@font/baloo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Please Enter Your Username"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:hint="Your username"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:inputType="textPersonName"
+        android:backgroundTint="#F07167"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="35dp"
+        android:text="Next"
+        android:textColor="#FDFCDC"
+        android:backgroundTint="#F07167"/>
+
+</LinearLayout>
